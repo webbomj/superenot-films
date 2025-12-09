@@ -1,0 +1,38 @@
+:host {
+    display: block;
+    background-color: rgb(233, 233, 233);
+    width: 100vw;
+    height: 100vh;
+}
+
+.result-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.result {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    color: #086221;
+}
+
+.button {
+    font-size: 18px;
+    padding: 15px 30px;
+
+    & .mdc-button__label {
+        display: flex !important;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+// flex для label кнопки
+::ng-deep .button .mdc-button__label {
+    display: flex !important;
+}

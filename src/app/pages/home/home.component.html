@@ -1,0 +1,17 @@
+<div class="result-wrapper">
+  @if (selectedMovie(); as movie) {
+  <div class="result">{{ movie }}</div>
+  }
+  <button
+    class="button"
+    matButton="filled"
+    mat-raised-button
+    color="primary"
+    (click)="pickRandomMovie()"
+    [disabled]="isLoading() || movies().length === 0"
+  >
+    @if (isLoading()) {
+    <mat-spinner diameter="20" style="margin-right: 8px"></mat-spinner>
+    Загрузка... } @else { 🎲 Выбрать случайный фильм }
+  </button>
+</div>
